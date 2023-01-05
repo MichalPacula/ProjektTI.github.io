@@ -12,21 +12,31 @@ body{
 .login{
     position: relative; left: 95%;
     text-decoration: none;
-    width: 10px;
+    width: 3.2%;
 }
 
 .login a{
     text-decoration: none;
-    color: darkorchid;
-    padding-right: 50px;
-}
-
-.login a:hover{
-    color: #ff00c7;
+    color: white;
 }
 
 .login a.active{
     color: green;
+}
+
+.login::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: green;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+.login:hover:after{
+    width: 100%;
 }
 
 .horizontal-menu{
@@ -35,28 +45,11 @@ body{
 
 .horizontal-menu a{
     text-decoration: none;
-    color: darkorchid;
-    padding-right: 50px;
-}
-
-.horizontal-menu a:hover{
-    color: #ff00c7;
+    color: white;
 }
 
 .horizontal-menu a.active{
     color: green;
-}
-
-.horizontal-menu li a{
-    display:  block;
-    text-transform: uppercase;
-    text-shadow: 0px 0px 5px #fff;
-    letter-spacing: 1px;
-    transition: transform 0.25s;
-}
-
-.horizontal-menu:hover li a{
-    text-shadow: 0px 0px 1px #0d1a3a;
 }
 
 .horizontal-menu li a:hover{
@@ -64,15 +57,38 @@ body{
 }
 
 ul.nav > li{
+    list-style: none;
     display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+ul.nav li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: green;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+
+ul.nav li:hover:after{
+    width: 100%;
 }
 
 .logo{
     position: relative; left: -330px;
 }
 
-.rigth_text{
+.right_text{
     padding-left: 600px;
+}
+
+.icons_index{
+    margin-top: 200px;
+    margin-left: 290px;
 }
 
 .icons_index a:nth-child(2){
@@ -95,40 +111,48 @@ ul.nav > li{
     display: block;
 }
 
-.ppc{
-    margin-left: 80px;
-    position: fixed;
-}
-
 .web_development{
     position: fixed;
 }
 
+.ppc{
+    margin-left: 370px;
+    position: fixed;
+}
+
 .strategia{
-    margin-left: 160px;
+    margin-left: 450px;
     position: fixed;
 }
 
 .seo{
-    margin-left: 240px;
+    margin-left: 530px;
     position: fixed;
 }
 .social_media{
-    margin-left: 320px;
+    margin-left: 610px;
     position: fixed;
 }
 
 .content_marketing{
-    margin-left: 400px;
+    margin-left: 690px;
     position: fixed;
 }
 
 .marketing_aplikacji{
-    margin-left: 480px;
+    margin-left:770px;
     position: fixed;
 }
 
-.analityka{
-    margin-left: 560px;
+.analityka {
+    margin-left: 850px;
     position: fixed;
+}
+
+.index_content{
+    width: 60%;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-50%);
+    text-align: center;
 }
