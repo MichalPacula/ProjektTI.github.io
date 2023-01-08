@@ -1,12 +1,21 @@
 body{
-    margin: 0 auto;
-    width: 1200px;
-    background-image: url(images/index-background.png);
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+}
+
+.video_background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .login{
@@ -41,6 +50,7 @@ body{
 
 .horizontal-menu{
     width: 820px;
+    padding-left: 500px;
 }
 
 .horizontal-menu a{
@@ -87,8 +97,8 @@ ul.nav li:hover:after{
 }
 
 .icons_index{
-    margin-top: 200px;
-    margin-left: 290px;
+    margin-top: 740px;
+    margin-left: 570px;
 }
 
 .icons_index a:nth-child(2){
@@ -105,6 +115,7 @@ ul.nav li:hover:after{
 
 .icons_index p {
     display: none;
+    color: white;
 }
 
 .icons_index:hover p{
@@ -116,43 +127,35 @@ ul.nav li:hover:after{
 }
 
 .ppc{
-    margin-left: 370px;
+    margin-left: 650px;
     position: fixed;
 }
 
 .strategia{
-    margin-left: 450px;
+    margin-left: 730px;
     position: fixed;
 }
 
 .seo{
-    margin-left: 530px;
+    margin-left: 810px;
     position: fixed;
 }
 .social_media{
-    margin-left: 610px;
+    margin-left: 890px;
     position: fixed;
 }
 
 .content_marketing{
-    margin-left: 690px;
+    margin-left: 970px;
     position: fixed;
 }
 
 .marketing_aplikacji{
-    margin-left:770px;
+    margin-left: 1050px;
     position: fixed;
 }
 
 .analityka {
-    margin-left: 850px;
+    margin-left: 1130px;
     position: fixed;
-}
-
-.index_content{
-    width: 60%;
-    position: absolute;
-    top: 25%;
-    transform: translateY(-50%);
-    text-align: center;
 }
