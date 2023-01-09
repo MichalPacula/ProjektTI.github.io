@@ -4,7 +4,7 @@ body{
 }
 
 .section{
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -18,82 +18,87 @@ body{
     width: 100%;
 }
 
-.login{
-    position: relative; left: 95%;
-    text-decoration: none;
-    width: 3.2%;
-}
-
-.login a{
-    text-decoration: none;
-    color: white;
-}
-
-.login a.active{
-    color: green;
-}
-
-.login::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: green;
-    position: absolute;
+.video_background_other_pages{
+    position: fixed;
+    top: 0;
     left: 0;
-    bottom: -5px;
-    transition: 0.5s;
+    width: 100%;
 }
 
-.login:hover:after{
-    width: 100%;
+.login{
+    position: fixed;
+    left: 92%;
+    top: 3%;
+    text-decoration: none;
+}
+
+.login > a{
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 400;
+    padding: 1px 10px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.login > a:hover{
+    letter-spacing: 0.05em;
+    background: #1e9bff;
+    box-shadow: 0 0 35px #1e9bff;
+    z-index: -1;
 }
 
 .horizontal-menu{
-    width: 820px;
-    padding-left: 500px;
-}
-
-.horizontal-menu a{
-    text-decoration: none;
-    color: white;
-}
-
-.horizontal-menu a.active{
-    color: green;
-}
-
-.horizontal-menu li a:hover{
-    transform: translateY(10px);
+    display: flex;
+    position: fixed;
+    left: 32%;
+    top: 7%;
 }
 
 ul.nav > li{
-    list-style: none;
+    text-decoration: none;
     display: inline-block;
-    margin: 0 20px;
-    position: relative;
 }
 
-ul.nav li::after{
-    content: '';
-    height: 3px;
-    width: 0;
-    background: green;
-    position: absolute;
-    left: 0;
-    bottom: -5px;
+ul.nav > li > a{
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 400;
+    padding: 1px 10px;
     transition: 0.5s;
+    margin-left: 10px;
 }
 
-ul.nav li:hover:after{
-    width: 100%;
+ul.nav > li > a:hover{
+    letter-spacing: 0.05em;
+    background: #1e9bff;
+    box-shadow: 0 0 35px #1e9bff;
+    z-index: -1;
+}
+
+ul.nav > li > a > span{
+    position: relative;
+    z-index: 1;
+}
+
+ul.nav > li > a > i{
+    position: fixed;
+    inset: 0;
+    display: block;
 }
 
 .logo{
-    position: relative; left: -330px;
-}
-
-.right_text{
-    padding-left: 600px;
+    position: fixed;
+    top: 4%;
+    left: 2%;
 }
 
 .icons_index{
@@ -158,4 +163,148 @@ ul.nav li:hover:after{
 .analityka {
     margin-left: 1130px;
     position: fixed;
+}
+
+.buttons{
+    position: fixed;
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.web_button{
+    top: 25%;
+    left: 30%;
+}
+
+.ppc_button{
+    top: 25%;
+    left: 55%;
+}
+
+.strategia_button{
+    top: 38%;
+    left: 30%;
+}
+
+.seo_button{
+    top: 38%;
+    left: 55%;
+}
+
+.social_media_button{
+    top: 51%;
+    left: 30%;
+}
+
+.content_marketing_button{
+    top: 51%;
+    left: 55%;
+}
+
+.marketing_aplikacji_button{
+    top: 64%;
+    left: 30%;
+}
+
+.analityka_button{
+    top: 64%;
+    left: 55%;
+}
+
+.buttons > span{
+    background: black;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.buttons:hover > span{
+    width: 100%;
+}
+
+.buttons:hover{
+    border: none;
+}
+
+.popup{
+    width: 1000px;
+    height: 300px;
+    background: white;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 1;
+}
+
+.popup_x{
+    position: fixed;
+    width: 25px;
+    height: 25px;
+    left: 97.3%;
+    top: 0.5%;
+}
+
+.slider_wrapper{
+    position: fixed;
+    max-width: 1200px;
+    top: 16%;
+    left: 20%;
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 24px 48px -12px hsla(0, 0%, 0%, 0.25);
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider_nav{
+    display: flex;
+    column-gap: 16px;
+    position: fixed;
+    left: 50%;
+    top: 92%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider_nav a{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.75;
+    transition: opacity ease 0.25s;
+}
+
+.slider_nav a:hover{
+    opacity: 1;
 }
