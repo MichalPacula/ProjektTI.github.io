@@ -1,4 +1,5 @@
 body{
+    aspect-ratio: auto;
     padding: 0;
     margin: 0;
 }
@@ -12,6 +13,7 @@ body{
 }
 
 .video_background{
+    aspect-ratio: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -19,6 +21,7 @@ body{
 }
 
 .video_background_other_pages{
+    aspect-ratio: auto;
     position: fixed;
     top: 0;
     left: 0;
