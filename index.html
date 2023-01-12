@@ -3,15 +3,17 @@
     <head>
         <link rel="icon" href="images/adverte_favicon_gif.gif" type="image/gif">
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Adverte</title>
         <link rel="stylesheet" type="text/css" href="main.css"/>
+        <script src="web_script.js"></script>
     </head>
     <body>
     </div>
     <div class="section">
         <div class="video_background">
-            <video autoplay loop muted>
-                <source src="images/adverte_background_mp4.mp4" type="video/mp4">
+            <video autoplay loop muted id="video_background_1080p">
+                <source src="images/adverte_background_mp4.mp4">
             </video>
         </div>
         <div class="login">
@@ -21,7 +23,7 @@
             <ul class="nav">
                 <li><a href="index.html"><span>Strona główna</span></a></li>
                 <li><a href="uslugi.html"><span>Usługi</span></a></li>
-                <li><a href="partnerzy.html"><span>Partnerzy</span></a></li>
+                <li><a href="partnerzy.html#slide_1"><span>Partnerzy</span></a></li>
                 <li><a href="onas.html"><span>O nas</span></a></li>
                 <li><a href="kontakt.html"><span>Kontakt</span></a></li>
             </ul>
@@ -98,6 +100,9 @@
             </a>
             <p><strong>Analityka</strong></p>
         </div>
+    </div>
+    <div class="foot">
+        &copy; 2022 DMA &amp; Adverte
     </div>
     </body>
 </html>
