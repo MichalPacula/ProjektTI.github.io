@@ -111,8 +111,8 @@ ul.nav > li > a > i{
 }
 
 .icons_index{
-    margin-top: 740px;
-    margin-left: 570px;
+    margin-top: 600px;
+    margin-left: 460px;
 }
 
 .icons_index a:nth-child(2){
@@ -141,36 +141,36 @@ ul.nav > li > a > i{
 }
 
 .ppc{
-    margin-left: 650px;
+    margin-left: 540px;
     position: fixed;
 }
 
 .strategia{
-    margin-left: 730px;
+    margin-left: 620px;
     position: fixed;
 }
 
 .seo{
-    margin-left: 810px;
+    margin-left: 700px;
     position: fixed;
 }
 .social_media{
-    margin-left: 890px;
+    margin-left: 780px;
     position: fixed;
 }
 
 .content_marketing{
-    margin-left: 970px;
+    margin-left: 860px;
     position: fixed;
 }
 
 .marketing_aplikacji{
-    margin-left: 1050px;
+    margin-left: 940px;
     position: fixed;
 }
 
 .analityka {
-    margin-left: 1130px;
+    margin-left: 1020px;
     position: fixed;
 }
 
