@@ -275,9 +275,9 @@ ul.nav > li > a > i{
 
 .slider_wrapper{
     position: fixed;
-    max-width: 1200px;
-    top: 16%;
-    left: 20%;
+    max-width: 800px;
+    top: 22%;
+    left: 25%;
 }
 
 .slider{
