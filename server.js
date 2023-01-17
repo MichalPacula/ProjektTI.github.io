@@ -9,7 +9,7 @@ const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
 const methodOverride = require("method-override");
-var path = require("path");
+const path = require("path");
 
 const initializePassport = require("./passport_config");
 initializePassport(passport,
@@ -17,7 +17,7 @@ initializePassport(passport,
         id => users.find(user => user.id === id)
 );
 
-const users = [];
+users = [];
 
 app.use(express.urlencoded({ extended: false}));
 app.use(methodOverride("_method"));
@@ -30,7 +30,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.get("/", (req, res) => {
+app.get("/", checkNotAuthenticated,(req, res) => {
     res.sendFile(__dirname + "/views/index.html",);
 })
 
@@ -54,6 +54,10 @@ app.get("/kontakt", (req, res) => {
     res.sendFile(__dirname + "/views/kontakt.html");
 })
 
+app.get("/index_loggedin", checkAuthenticated, (req, res) => {
+    res.sendFile(__dirname + "/views/index_loggedin.html");
+})
+
 app.post("/rejestracja", checkNotAuthenticated,  async (req, res) => {
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -67,11 +71,10 @@ app.post("/rejestracja", checkNotAuthenticated,  async (req, res) => {
     } catch{
         res.redirect("/rejestracja");
     }
-    console.log(users)
 })
 
 app.post("/logowanie", checkNotAuthenticated, passport.authenticate("local",{
-    successRedirect: "/",
+    successRedirect: "/index_loggedin",
     failureRedirect: "/logowanie",
     failureFlash: true
 }))
@@ -81,6 +84,9 @@ app.delete("/wyloguj", (req, res, next) =>{
         if (err) { return next(err);}
         res.redirect("/");
     })
+    if(idGlobal === users[0].id){
+        console.log("dziala")
+    }
 })
 
 function checkAuthenticated(req, res, next){
@@ -92,10 +98,22 @@ function checkAuthenticated(req, res, next){
 
 function checkNotAuthenticated(req, res, next){
     if (req.isAuthenticated()){
-        return res.redirect("/");
+        return res.redirect("/index_logged");
     }
     next();
 }
+
+app.delete("/usun_uzytkownika",(req, res, next) => {
+    req.logOut(function (err){
+        if(err) {return next(err);}
+    })
+    for(var i=0; i<=users.length-1; i++){
+        if(users[i] === user){
+            users.splice(i, 1);
+        }
+    }
+    res.redirect("/");
+})
 
 app.use(express.static(path.join(__dirname, "/views")));
 
