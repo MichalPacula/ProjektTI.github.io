@@ -5,7 +5,7 @@ function initialize(passport, getUserByEmail, getUserById){
     async function authenticateUser(email, password, done){
         global.user = getUserByEmail(email);
         if(user == null){
-            return done(null, false, {message: "No user with that email"});
+            return done(null, false, {message: "Nie ma użytkownika o takim email-u."});
         }
 
         try{
@@ -13,7 +13,7 @@ function initialize(passport, getUserByEmail, getUserById){
                 return done(null, user);
             }
             else{
-                return done(null, false, {message: "Password incorrect"});
+                return done(null, false, {message: "Błędne hasło."});
             }
         } catch (error){
             return done(error);

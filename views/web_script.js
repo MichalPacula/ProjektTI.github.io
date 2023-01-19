@@ -16,14 +16,24 @@ var count = 2;
 function automaticSlider(){
     var currentUrl = document.URL;
     var site_without_path = currentUrl.replace(/^.*[\\\/]/, '');
-    if(site_without_path == "partnerzy.html" || site_without_path.slice(0, -1) == "partnerzy.html#slide_"){
+    if(site_without_path == "partnerzy" || site_without_path.slice(0, -1) == "partnerzy#slide_"){
         if(count >= 6){
-            window.open("partnerzy.html#slide_" + count, "_self");
+            window.open("partnerzy#slide_" + count, "_self");
             count = 1;
         }
         else if(count < 6){
-            window.open("partnerzy.html#slide_" + count, "_self");
-            count = count + 1;
+            window.open("partnerzy#slide_" + count, "_self");
+            count++;
+    }
+    }
+    if(site_without_path == "partnerzy_l" || site_without_path.slice(0, -1) == "partnerzy_l#slide_"){
+        if(count >= 6){
+            window.open("partnerzy_l#slide_" + count, "_self");
+            count = 1;
+        }
+        else if(count < 6){
+            window.open("partnerzy_l#slide_" + count, "_self");
+            count++;
     }
     }
 }

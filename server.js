@@ -34,6 +34,10 @@ app.get("/", checkNotAuthenticated,(req, res) => {
     res.sendFile(__dirname + "/views/index.html",);
 })
 
+app.get("/index_l", checkAuthenticated, (req, res) => {
+    res.sendFile(__dirname + "/views/index_loggedin.html");
+})
+
 app.get("/logowanie", checkNotAuthenticated, (req, res) => {
     res.render(__dirname + "/views/logowanie.ejs");
 })
@@ -46,16 +50,28 @@ app.get("/uslugi", (req, res) => {
     res.sendFile(__dirname + "/views/uslugi.html");
 })
 
-app.get("/onas", (req, res) => {
+app.get("/partnerzy", checkNotAuthenticated, (req, res) => {
+    res.sendFile(__dirname + "/views/partnerzy.html");
+})
+
+app.get("/partnerzy_l", checkAuthenticated, (req, res) => {
+    res.sendFile(__dirname + "/views/partnerzy_loggedin.html");
+})
+
+app.get("/onas", checkNotAuthenticated,(req, res) => {
     res.sendFile(__dirname + "/views/onas.html");
 })
 
-app.get("/kontakt", (req, res) => {
+app.get("/onas_l", checkAuthenticated, (req, res) => {
+    res.sendFile(__dirname + "/views/onas_loggedin.html");
+})
+
+app.get("/kontakt", checkNotAuthenticated,(req, res) => {
     res.sendFile(__dirname + "/views/kontakt.html");
 })
 
-app.get("/index_loggedin", checkAuthenticated, (req, res) => {
-    res.sendFile(__dirname + "/views/index_loggedin.html");
+app.get("/kontakt_l", checkAuthenticated, (req, res) => {
+    res.sendFile(__dirname + "/views/kontakt_loggedin.html")
 })
 
 app.post("/rejestracja", checkNotAuthenticated,  async (req, res) => {
@@ -74,7 +90,7 @@ app.post("/rejestracja", checkNotAuthenticated,  async (req, res) => {
 })
 
 app.post("/logowanie", checkNotAuthenticated, passport.authenticate("local",{
-    successRedirect: "/index_loggedin",
+    successRedirect: "/index_l",
     failureRedirect: "/logowanie",
     failureFlash: true
 }))
@@ -84,9 +100,6 @@ app.delete("/wyloguj", (req, res, next) =>{
         if (err) { return next(err);}
         res.redirect("/");
     })
-    if(idGlobal === users[0].id){
-        console.log("dziala")
-    }
 })
 
 function checkAuthenticated(req, res, next){
@@ -98,7 +111,7 @@ function checkAuthenticated(req, res, next){
 
 function checkNotAuthenticated(req, res, next){
     if (req.isAuthenticated()){
-        return res.redirect("/index_logged");
+        return res.redirect("/index_l");
     }
     next();
 }

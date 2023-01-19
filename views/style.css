@@ -79,7 +79,7 @@ body{
     border-radius: 12px;
     margin-left: 20px;
     margin-top: 10%;
-    left: 85%;
+    left: 50%;
     padding: 5px 10px;
     width: fit-content;
     font-size: 20px;
@@ -94,6 +94,42 @@ body{
 }
 
 .horizontal-menu > ul > li:hover{
+    text-shadow: -2px -2px 10px white,
+                2px 2px 10px white,
+                0 0 20px yellow,
+                0 0 40px yellow,
+                0 0 60px yellow;
+    box-shadow: 0 0 5px white,
+                inset 0 0 5px white,
+                0 0 20px dodgerblue,
+                inset 0 0 20px dodgerblue,
+                0 0 40px dodgerblue,
+                inset 0 0 40px dodgerblue;
+}
+
+.horizontal-menu-loggedin > ul> li {
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    border: 2px solid black;
+    border-radius: 12px;
+    margin-left: 20px;
+    margin-top: 10%;
+    padding: 5px 10px;
+    width: fit-content;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    transition: text-shadow 0.5s, box-shadow 0.5s;
+}
+
+.horizontal-menu-loggedin > ul > li > a{
+    color: white;
+    text-decoration: none;
+}
+
+.horizontal-menu-loggedin > ul > li:hover{
     text-shadow: -2px -2px 10px white,
                 2px 2px 10px white,
                 0 0 20px yellow,
@@ -235,7 +271,7 @@ body{
 .buttons > span{
     background: black;
     height: 100%;
-    width: 0%;
+    width: 0;
     border-radius: 25px;
     position: absolute;
     left: 0;
@@ -337,7 +373,7 @@ body{
     font-weight: bolder;
     text-align: center;
     top: 20%;
-    left: 30%;
+    left: 37%;
 }
 
 .foot{
@@ -424,7 +460,7 @@ input{
     background: #15CBE5;
     color: white;
     height: 40px;
-    width: 80px;
+    width: 120px;
     border-radius: 20px;
     border: 0;
     outline: 0;
@@ -446,10 +482,55 @@ input{
     background: #15CBE5;
     color: white;
     height: 40px;
-    width: 80px;
+    width: 120px;
     margin-bottom: 20px;
     border-radius: 20px;
     border: 0;
     outline: 0;
     cursor: pointer;
+}
+
+.logged_menu > ul > li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    font-family: "Poppins", sans-serif;
+    border: 2px solid black;
+    border-radius: 12px;
+    margin-left: 8px;
+    left: 300%;
+    padding: 5px 10px;
+    width: fit-content;
+    transition: box-shadow 0.5s;
+}
+
+.logged_menu > ul > li > form > button{
+    color: white;
+    outline: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    transition: text-shadow 0.5s;
+}
+
+.logged_menu > ul > li:hover{
+    box-shadow: 0 0 5px white,
+                inset 0 0 5px white,
+                0 0 20px dodgerblue,
+                inset 0 0 20px dodgerblue,
+                0 0 40px dodgerblue,
+                inset 0 0 40px dodgerblue;
+}
+
+.logged_menu > ul > li > form > button:hover{
+    text-shadow: -2px -2px 10px white,
+                2px 2px 10px white,
+                0 0 20px yellow,
+                0 0 40px yellow,
+                0 0 60px yellow;
 }

@@ -25,16 +25,27 @@
                 <img src="images/adverte_logo_gif.gif" type="image/gif">
             </a>
         </div>
-        <div class="login">
-            <a href="/logowanie">Login</a>
+        <div class="logged_menu">
+            <ul>
+                <li>
+                    <form action="usun_uzytkownika?_method=DELETE" method="post">
+                        <button type="submit">Usuń użytkownika</button>
+                    </form>
+                </li>
+                <li>
+                    <form action="/wyloguj?_method=DELETE" method="post">
+                        <button type="submit">Wyloguj się</button>
+                    </form>
+                </li>
+            </ul>
         </div>
-        <div class="horizontal-menu">
+        <div class="horizontal-menu-loggedin">
             <ul class="nav">
-                <li><a href="/"><span>Strona główna</span></a></li>
+                <li><a href="/index_l"><span>Strona główna</span></a></li>
                 <li><a href="/uslugi"><span>Usługi</span></a></li>
-                <li><a href="/partnerzy#slide_1"><span>Partnerzy</span></a></li>
-                <li><a href="/onas"><span>O nas</span></a></li>
-                <li><a href="/kontakt"><span>Kontakt</span></a></li>
+                <li><a href="/partnerzy_l#slide_1"><span>Partnerzy</span></a></li>
+                <li><a href="/onas_l"><span>O nas</span></a></li>
+                <li><a href="/kontakt_l"><span>Kontakt</span></a></li>
             </ul>
         </div>
         <div class="onas_tekst">
