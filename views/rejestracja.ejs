@@ -28,6 +28,9 @@
         </div>
         <div class="form_box">
             <h1 id="title">Rejestracja</h1>
+            <% if(messages.error){ %>
+                <%= messages.error %>
+                <% } %>
             <form action="/rejestracja" method="post">
                 <div class="input_group">
                     <div class="input_field" id="name_field">

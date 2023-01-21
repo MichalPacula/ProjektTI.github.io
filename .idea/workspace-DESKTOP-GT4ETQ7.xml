@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5912988a-08c8-4169-b0a3-d667386555fb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index_loggedin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/index_loggedin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/kontakt_loggedin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/kontakt_loggedin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/onas_loggedin.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/onas_loggedin.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Jp20KC95OOtadOQRamZ64qdktn" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/micha/OneDrive/Pulpit/Projekt biznesowy test&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\micha\OneDrive\Dokumenty\Studia\Technologie informacyjne laby\Projekt biznesowy\views" />
+      <recent name="C:\Users\micha\OneDrive\Pulpit\Projekt biznesowy test\views" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5912988a-08c8-4169-b0a3-d667386555fb" name="Changes" comment="" />
+      <created>1672760479382</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1672760479382</updated>
+      <workItem from="1672760480507" duration="626000" />
+      <workItem from="1672942394464" duration="3136000" />
+      <workItem from="1673287359332" duration="11441000" />
+      <workItem from="1673532578102" duration="4757000" />
+      <workItem from="1673537995979" duration="1005000" />
+      <workItem from="1673615273857" duration="2748000" />
+      <workItem from="1673625842601" duration="16000" />
+      <workItem from="1673690446634" duration="12894000" />
+      <workItem from="1673704382940" duration="453000" />
+      <workItem from="1673939800805" duration="408000" />
+      <workItem from="1673940508178" duration="1443000" />
+      <workItem from="1673944514327" duration="5360000" />
+      <workItem from="1673957712678" duration="183000" />
+      <workItem from="1673959265065" duration="794000" />
+      <workItem from="1673970271180" duration="4711000" />
+      <workItem from="1673989295543" duration="2627000" />
+      <workItem from="1674119465248" duration="603000" />
+      <workItem from="1674137030119" duration="6984000" />
+      <workItem from="1674283948963" duration="324000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

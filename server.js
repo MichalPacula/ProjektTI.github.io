@@ -46,8 +46,12 @@ app.get("/rejestracja", checkNotAuthenticated, (req, res) => {
     res.render(__dirname + "/views/rejestracja.ejs");
 })
 
-app.get("/uslugi", (req, res) => {
+app.get("/uslugi", checkNotAuthenticated,(req, res) => {
     res.sendFile(__dirname + "/views/uslugi.html");
+})
+
+app.get("/uslugi_l", checkAuthenticated ,(req, res) => {
+    res.sendFile(__dirname + "/views/uslugi_loggedin.html");
 })
 
 app.get("/partnerzy", checkNotAuthenticated, (req, res) => {
@@ -79,14 +83,14 @@ app.post("/rejestracja", checkNotAuthenticated,  async (req, res) => {
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
         users.push({
             id: Date.now().toString(),
-            name: req.body.name,
+            name: req.body.name ,
             email: req.body.email,
             password: hashedPassword
         })
         res.redirect("/logowanie");
     } catch{
         res.redirect("/rejestracja");
-    }
+    };
 })
 
 app.post("/logowanie", checkNotAuthenticated, passport.authenticate("local",{

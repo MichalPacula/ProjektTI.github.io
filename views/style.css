@@ -310,6 +310,7 @@ body{
     height: 25px;
     left: 97.3%;
     top: 0.5%;
+    cursor: pointer;
 }
 
 .slider_wrapper{
@@ -533,4 +534,140 @@ input{
                 0 0 20px yellow,
                 0 0 40px yellow,
                 0 0 60px yellow;
+}
+
+.add_cart_button{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 48%;
+    background: #15CBE5;
+    color: white;
+    height: 40px;
+    width: 120px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+    left: 43%;
+    top: 60%;
+}
+
+.add_cart_button > span{
+    position: fixed;
+    left: 45.1%;
+    top: 63.5%;
+    font-size: 18px;
+}
+
+#cart-icon{
+    position: fixed;
+    color: white;
+    left: 92.5%;
+    top: 9%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.cart{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: white;
+    transition: transform 0.5s;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.cart_title{
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.cart_box{
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.cart_image{
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.detail_box{
+    display: grid;
+    row-gap: 8px;
+}
+
+.cart_product_title{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+
+.price{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+
+}
+
+.cart_remove{
+    cursor: pointer;
+    font-size: 24px;
+    color: orangered;
+}
+
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+    border-top: 1px solid black;
+}
+
+.total_title{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+
+.total_price{
+    font-family: "Poppins", sans-serif;
+    margin-left: 8px;
+}
+
+.button_buy{
+    display: flex;
+    margin: 24px auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #15CBE5;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.quantity{
+    visibility: hidden;
+}
+
+.product_price{
+    visibility: hidden;
+}
+
+.product_image{
+    display: none;
 }

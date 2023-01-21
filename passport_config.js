@@ -7,7 +7,6 @@ function initialize(passport, getUserByEmail, getUserById){
         if(user == null){
             return done(null, false, {message: "Nie ma użytkownika o takim email-u."});
         }
-
         try{
             if(await bcrypt.compare(password, user.password)){
                 return done(null, user);
