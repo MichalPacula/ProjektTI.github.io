@@ -91,6 +91,7 @@ app.post("/rejestracja", checkNotAuthenticated,  async (req, res) => {
     } catch{
         res.redirect("/rejestracja");
     };
+    console.log(users);
 })
 
 app.post("/logowanie", checkNotAuthenticated, passport.authenticate("local",{
